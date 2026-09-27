@@ -1,0 +1,137 @@
+.admin-reports-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.admin-reports-header {
+  background: #1f2937;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-reports-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.admin-reports-header p {
+  margin: 5px 0 0;
+  color: #d1d5db;
+}
+
+.admin-reports-header button {
+  border: none;
+  background: white;
+  color: #1f2937;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.admin-reports-content {
+  padding: 35px 40px;
+}
+
+.admin-reports-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.admin-reports-heading h2 {
+  margin: 0;
+  color: #111827;
+}
+
+.admin-reports-heading p {
+  margin-top: 6px;
+  color: #6b7280;
+}
+
+.refresh-reports-button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.report-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 24px;
+  text-align: center;
+}
+
+.report-card span {
+  font-size: 28px;
+}
+
+.report-card p {
+  margin: 12px 0 8px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.report-card h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 28px;
+}
+
+.revenue-card h3 {
+  color: #2e7d32;
+}
+
+.admin-reports-message {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  color: #4b5563;
+}
+
+.admin-reports-message.error {
+  color: #b91c1c;
+}
+
+@media (max-width: 900px) {
+  .reports-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-reports-header {
+    padding: 18px;
+    gap: 15px;
+  }
+
+  .admin-reports-content {
+    padding: 20px;
+  }
+
+  .admin-reports-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .reports-grid {
+    grid-template-columns: 1fr;
+  }
+}

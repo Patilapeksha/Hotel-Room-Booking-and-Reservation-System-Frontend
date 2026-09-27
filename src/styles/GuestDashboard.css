@@ -1,0 +1,174 @@
+.guest-dashboard {
+  min-height: 100vh;
+  background: #f4f6f8;
+}
+
+/* Header */
+
+.guest-header {
+  min-height: 72px;
+  padding: 0 35px;
+  background: #263238;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 8px;
+  font-size: 21px;
+}
+
+.guest-header h1 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.guest-header p {
+  margin: 3px 0 0;
+  color: #cfd8dc;
+  font-size: 12px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 14px;
+}
+
+.header-right button {
+  padding: 9px 16px;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.header-right button:hover {
+  background: #ffffff;
+  color: #263238;
+}
+
+/* Main */
+
+.guest-content {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 50px 25px;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.welcome-section h2 {
+  margin: 0 0 10px;
+  color: #263238;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.welcome-section p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* Cards */
+
+.guest-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.guest-card {
+  padding: 28px 22px;
+  background: #ffffff;
+  border: 1px solid #e1e5e9;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.card-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f2f4;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+.guest-card h3 {
+  margin: 0 0 10px;
+  color: #263238;
+  font-size: 18px;
+}
+
+.guest-card p {
+  min-height: 48px;
+  margin: 0 0 22px;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.guest-card button {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 6px;
+  background: #263238;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.guest-card button:hover {
+  background: #1c2529;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+  .guest-header {
+    padding: 15px 20px;
+  }
+
+  .header-right {
+    gap: 8px;
+  }
+
+  .header-right span {
+    display: none;
+  }
+
+  .guest-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .guest-content {
+    padding: 35px 20px;
+  }
+}

@@ -1,0 +1,165 @@
+.admin-payouts-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.admin-payouts-header {
+  background: #1f2937;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-payouts-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.admin-payouts-header p {
+  margin: 5px 0 0;
+  color: #d1d5db;
+}
+
+.admin-payouts-header button {
+  border: none;
+  background: white;
+  color: #1f2937;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.admin-payouts-content {
+  padding: 35px 40px;
+}
+
+.admin-payouts-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.admin-payouts-heading h2 {
+  margin: 0;
+  color: #111827;
+}
+
+.admin-payouts-heading p {
+  margin-top: 6px;
+  color: #6b7280;
+}
+
+.refresh-payouts-button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.admin-payouts-list {
+  display: grid;
+  gap: 20px;
+}
+
+.admin-payout-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 22px;
+}
+
+.payout-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.payout-card-header h3 {
+  margin: 0;
+  color: #111827;
+}
+
+.payout-card-header span {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.payout-status {
+  background: #e8f5e9;
+  color: #2e7d32 !important;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.payout-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 18px;
+}
+
+.payout-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.payout-details span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.payout-details strong {
+  color: #111827;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.admin-payouts-message {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  color: #4b5563;
+}
+
+.admin-payouts-message.error {
+  color: #b91c1c;
+}
+
+@media (max-width: 800px) {
+  .payout-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-payouts-header {
+    padding: 18px;
+    gap: 15px;
+  }
+
+  .admin-payouts-content {
+    padding: 20px;
+  }
+
+  .admin-payouts-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .payout-details {
+    grid-template-columns: 1fr;
+  }
+}

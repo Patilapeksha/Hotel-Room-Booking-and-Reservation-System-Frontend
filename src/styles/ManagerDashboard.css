@@ -1,0 +1,197 @@
+.manager-dashboard {
+  min-height: 100vh;
+  background: #f4f6f8;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.manager-header {
+  height: 70px;
+  padding: 0 30px;
+  background: #263238;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.manager-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.manager-icon {
+  font-size: 27px;
+}
+
+.manager-header h1 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.manager-header p {
+  margin: 4px 0 0;
+  color: #cfd8dc;
+  font-size: 13px;
+}
+
+.manager-header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.manager-header-right span {
+  font-size: 14px;
+}
+
+.manager-header-right button {
+  padding: 8px 15px;
+  border: 1px solid white;
+  border-radius: 6px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.manager-header-right button:hover {
+  background: white;
+  color: #263238;
+}
+
+.manager-content {
+  height: calc(100vh - 70px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 25px;
+  box-sizing: border-box;
+}
+
+.manager-welcome {
+  margin-bottom: 22px;
+}
+
+.manager-welcome h2 {
+  margin: 0 0 6px;
+  color: #263238;
+  font-size: 24px;
+}
+
+.manager-welcome p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Cards side by side */
+.manager-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.manager-card {
+  flex: 1;
+  min-width: 0;
+  background: white;
+  border: 1px solid #e1e5e9;
+  border-radius: 10px;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.manager-card-icon {
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+.manager-card h3 {
+  margin: 0 0 8px;
+  color: #263238;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.manager-card p {
+  margin: 0 0 18px;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.manager-card button {
+  width: 100%;
+  padding: 9px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #263238;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.manager-card button:hover {
+  background: #1c2529;
+}
+
+/* Laptop / smaller screen */
+@media (max-width: 1000px) {
+  .manager-content {
+    padding: 20px 15px;
+  }
+
+  .manager-cards {
+    gap: 10px;
+  }
+
+  .manager-card {
+    padding: 16px 12px;
+  }
+
+  .manager-card h3 {
+    font-size: 15px;
+  }
+
+  .manager-card p {
+    font-size: 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .manager-dashboard {
+    overflow-y: auto;
+  }
+
+  .manager-header {
+    height: auto;
+    min-height: 70px;
+    padding: 12px 15px;
+  }
+
+  .manager-header-right span {
+    display: none;
+  }
+
+  .manager-content {
+    height: auto;
+    padding: 20px 15px;
+  }
+
+  .manager-cards {
+    flex-direction: column;
+  }
+
+  .manager-card {
+    min-height: 180px;
+  }
+}

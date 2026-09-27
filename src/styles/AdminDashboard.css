@@ -1,0 +1,177 @@
+.admin-dashboard {
+  min-height: 100vh;
+  background: #f4f6f8;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.admin-header {
+  height: 70px;
+  padding: 0 30px;
+  background: #263238;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.admin-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-icon {
+  font-size: 27px;
+}
+
+.admin-header h1 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.admin-header p {
+  margin: 4px 0 0;
+  color: #cfd8dc;
+  font-size: 13px;
+}
+
+.admin-header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.admin-header-right span {
+  font-size: 14px;
+}
+
+.admin-header-right button {
+  padding: 8px 15px;
+  border: 1px solid white;
+  border-radius: 6px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.admin-header-right button:hover {
+  background: white;
+  color: #263238;
+}
+
+.admin-content {
+  height: calc(100vh - 70px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.admin-welcome {
+  margin-bottom: 22px;
+}
+
+.admin-welcome h2 {
+  margin: 0 0 6px;
+  color: #263238;
+  font-size: 24px;
+}
+
+.admin-welcome p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.admin-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.admin-card {
+  min-height: 205px;
+  background: white;
+  border: 1px solid #e1e5e9;
+  border-radius: 10px;
+  padding: 18px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s ease;
+}
+
+.admin-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(38, 50, 56, 0.08);
+}
+
+.admin-card-icon {
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+.admin-card h3 {
+  margin: 0 0 7px;
+  color: #263238;
+  font-size: 16px;
+}
+
+.admin-card p {
+  margin: 0 0 15px;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.admin-card button {
+  width: 100%;
+  padding: 9px;
+  border: none;
+  border-radius: 6px;
+  background: #263238;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.admin-card button:hover {
+  background: #37474f;
+}
+
+@media (max-width: 900px) {
+  .admin-content {
+    padding: 20px 15px;
+  }
+
+  .admin-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-dashboard {
+    overflow-y: auto;
+  }
+
+  .admin-header {
+    padding: 15px 18px;
+  }
+
+  .admin-header-right span {
+    display: none;
+  }
+
+  .admin-content {
+    height: auto;
+  }
+
+  .admin-cards {
+    grid-template-columns: 1fr;
+  }
+}
