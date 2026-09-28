@@ -242,53 +242,92 @@ Seeded data includes:
 
 11. Important API Endpoints
 
+
+API Endpoints
+
 Authentication
 
-POST /api/Auth/register
-POST /api/Auth/login
+Method| Endpoint| Purpose| Status
+POST| "/api/Auth/register"| Guest registration| ✅ Done
+POST| "/api/Auth/login"| User login and JWT generation| ✅ Done
+POST| "/api/Auth/refresh"| Refresh access token| ⚠️ Partial
+POST| "/api/Auth/forgot-password"| Password reset request| ⚠️ Partial
+POST| "/api/Auth/reset-password"| Reset password| ⚠️ Partial
 
-Hotels
+Hotels & Availability
 
-GET /api/Hotels
-
-Availability
-
-POST /api/Availability
-
-Room Holds
-
-POST /api/RoomHolds
-GET /api/RoomHolds
+Method| Endpoint| Purpose| Status
+GET| "/api/Hotels"| Get hotels| ✅ Done
+GET| "/api/Hotels/{id}"| Get hotel details| ✅ Done
+POST| "/api/Availability"| Search available rooms| ✅ Done
+POST| "/api/RoomHolds"| Hold a room temporarily| ✅ Done
+GET| "/api/RoomHolds"| View room holds| ⚠️ Partial
 
 Reservations
 
-POST /api/Reservations
-GET /api/Reservations
+Method| Endpoint| Purpose| Status
+POST| "/api/Reservations"| Create reservation| ✅ Done
+GET| "/api/Reservations"| Get reservations| ✅ Done
+GET| "/api/Reservations/{id}"| Get reservation details| ⚠️ Partial
+POST| "/api/Reservations/{id}/cancel"| Cancel reservation| ⚠️ Partial
+POST| "/api/Reservations/{id}/check-in"| Check in guest| ✅ Done
+POST| "/api/Reservations/{id}/check-out"| Check out guest| ✅ Done
 
 Payments
 
-POST /api/Payments
+Method| Endpoint| Purpose| Status
+POST| "/api/Payments"| Process mock payment| ✅ Done
+POST| "/api/Payments/webhook"| Payment confirmation/webhook| ⚠️ Partial
+GET| "/api/Payments/{reservationId}"| Get payment information| ⚠️ Partial
 
 Admin
 
-GET /api/AdminManagers
-PUT /api/AdminManagers/{id}/approve
-PUT /api/AdminManagers/{id}/reject
+Method| Endpoint| Purpose| Status
+GET| "/api/AdminHotels"| View all hotels| ✅ Done
+PUT| "/api/AdminHotels/{id}/activate"| Activate hotel| ✅ Done
+PUT| "/api/AdminHotels/{id}/deactivate"| Deactivate hotel| ✅ Done
+GET| "/api/AdminBookings"| View platform bookings| ✅ Done
+GET| "/api/AdminPayouts"| View payout information| ✅ Done
+GET| "/api/AdminReports"| View reports| ✅ Done
+GET| "/api/AdminManagers"| View manager applications| ⚠️ Partial
+PUT| "/api/AdminManagers/{id}/approve"| Approve manager| ⚠️ Partial
+PUT| "/api/AdminManagers/{id}/reject"| Reject manager| ⚠️ Partial
 
-GET /api/AdminHotels
-PUT /api/AdminHotels/{id}/activate
-PUT /api/AdminHotels/{id}/deactivate
+Hotel Manager
 
-GET /api/AdminBookings
-GET /api/AdminPayouts
-GET /api/AdminReports
+Method| Endpoint| Purpose| Status
+GET| "/api/ManagerHotels"| View manager's hotels| ✅ Done
+POST| "/api/ManagerHotels"| Create hotel| ✅ Done
+PUT| "/api/ManagerHotels/{id}"| Update hotel| ✅ Done
+GET| "/api/ManagerRooms"| View rooms| ✅ Done
+POST| "/api/ManagerRooms"| Create/manage rooms| ⚠️ Partial
+GET| "/api/ManagerReservations"| View hotel reservations| ✅ Done
+POST| "/api/ManagerReservations/{id}/check-in"| Check in guest| ✅ Done
+POST| "/api/ManagerReservations/{id}/check-out"| Check out guest| ✅ Done
+GET| "/api/Payouts"| View manager payouts| ✅ Done
 
-Manager
+Database / Supporting APIs
 
-GET /api/Payouts
+Method| Endpoint| Purpose| Status
+GET| "/api/RoomTypes"| View room types| ⚠️ Partial
+POST| "/api/RoomTypes"| Create room type| ⚠️ Partial
+GET| "/api/RatePlans"| View rate plans| ⚠️ Partial
+POST| "/api/RatePlans"| Create rate plan| ⚠️ Partial
 
-Additional room, reservation and management endpoints are available through Swagger.
+API Security
 
+Feature| Status
+JWT authentication| ✅ Done
+Password hashing| ✅ Done
+Role-based authorization| ✅ Done
+Protected API endpoints| ✅ Done
+Swagger/OpenAPI| ✅ Done
+JWT expiry handling| ✅ Done
+Refresh-token rotation| ⚠️ Partial
+Centralized error handling| ⚠️ Partial
+Input validation on all write endpoints| ⚠️ Partial
+
+«Note: Endpoint status is based on the functionality implemented and tested during development. Partial items represent functionality that exists in limited form or requires further completion for production use.»
 ---
 
 12. Concurrency and Double-Booking Protection
